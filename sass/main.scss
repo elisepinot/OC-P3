@@ -1,15 +1,8 @@
-@import "./vendors/normalize";
 @import "./utils/variables";
-@import "./layouts/form";
-
-body{
-    background: #000000;
-}
-
-h1{
-    color: white;
-}
-
-p{
-    color: blue;
-}
+// @import "./vendors/normalize";
+@import "./base/normalize";
+@import "./base/base";
+@import "./components/header";
+@import "./components/card";
+@import "./components/footer";
+@import "./layout/form";
