@@ -1,4 +1,6 @@
-@import "libs/normalize.scss";
+@import "./vendors/normalize";
+@import "./utils/variables";
+@import "./layouts/form";
 
 body{
     background: #000000;
