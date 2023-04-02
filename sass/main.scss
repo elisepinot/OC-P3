@@ -1,8 +1,8 @@
 @import "./utils/variables";
-// @import "./vendors/normalize";
+@import "./utils/mediaqueries";
 @import "./base/normalize";
 @import "./base/base";
 @import "./components/header";
 @import "./components/card";
 @import "./components/footer";
-@import "./layout/form";
+@import "./pages/home";

@@ -1,0 +1,23 @@
+footer{
+    background-color: #353535;
+    color: white;
+    line-height: 1.5rem;
+    padding-top: 24px;
+    p{
+        font-family: Shrikhand;
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+    .footer__link{
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        i{
+            margin-right: 8px;
+            width: 16px
+        }
+        &.footer__icon{
+            font-weight: 500;
+        }
+    }
+}

@@ -8,14 +8,34 @@ $background-color: #F5F5F5;
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    margin: 0;
 }
 
 #main-container{
-    // max-width: 1400px;
-    // width: auto;
-    width: 576px;
+    max-width: 1400px;
+    width: 100%;
+    // width: 576px;
     background-color: $background-color;
 } 
+
+section, footer{
+    padding: 0 20px 36px 20px;
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+}
+
+h1, h2{
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p{
+    margin:0;
+}
 
 
 
