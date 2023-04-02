@@ -1,0 +1,90 @@
+.top-img{
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(../../assets/restaurants/lapalette.jpg);
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -35px;
+    padding: 0px 20px 36px 20px;
+    background-color: $background-color;
+    // gap: 40px;
+
+    &__heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-family: $secundary-font;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 28px;
+        }
+    }
+
+    &__categ{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-bottom: 40px;
+
+        &__title{
+            text-transform : uppercase;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            
+        }
+        hr{
+            width: 40px;
+            border: solid #99E2D0;
+            border-top-width: 0px;
+            border-bottom-width: 3px;
+            margin-bottom: 8px;
+        }
+
+        &__plat{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #FFFFFF;
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            align-items:flex-end;
+            padding: 12px 5px;
+            width: 100%;
+            &__txt{
+                padding: 8px;
+                display: flex; /*Flexbox pour pouvoir ajouter un gap*/
+                flex-direction: column;
+                gap: 10px; 
+                &__name{
+                    padding: 0;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                &__details{
+                    padding: 0;
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+                }
+            &__price{
+                padding: 8px;
+                margin-right: 16px;
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            }
+    }
+        
+}
+
+

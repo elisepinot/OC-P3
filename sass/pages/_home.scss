@@ -10,18 +10,7 @@
     p{
         font-size: 18px;
         font-weight: 300;
-    }
-    button{
-        height: 50px;
-        font-weight: 500;
-        font-size: 16px;
-        color: #FFFFFF;
-        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
-        border: none;
-        padding: 0 24px;
-        margin-top: 36px;
+        margin-bottom: 36px;
     }
 }
 
@@ -37,15 +26,17 @@
         justify-content: space-around;
         &__card{
             display: flex;
-            justify-content: flex;
+            justify-content: center;
             align-items: center;
             width: auto;
             position: relative;
             margin-left: 12px;
         }
     }
+    
     .card__ellipse{
         position: absolute;
+        left: 0;
         transform: translateX(-50%);
         width: 24px;
         height: 24px;
@@ -56,6 +47,7 @@
         font-size: 14.18px;
         color: #FFFFFF;
         font-weight: 500;
+        z-index: 2;
     }
 
     .card__box{
@@ -64,17 +56,38 @@
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         background-color: #F6F6F6;
-        // display: flex;
         text-align: left;
+        z-index: 1;
+        position: relative;
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+            .card__box__icon{
+                color: $color-primary;
+            }
+        }
+        &::after{
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            background-color: #F5EDFF;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
         &__icon{
             color: #7E7E7E;
             padding-left: 24px;
-
         }
         &__text{
             display: inline-block;
             padding-left: 24px;
-            
         }
     }
 
@@ -90,7 +103,6 @@
         flex-direction: column; 
         gap: 32px;
         &__card{
-            // height: 248px;
             position: relative;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
@@ -121,36 +133,37 @@
                     h3{
                         font-size: 18px;
                         font-weight: 700;
+                        color: #101010;
                     }
                     p{
                         font-weight: 300;
+                        color: #101010;
                     }
                 }
 
-                &__like {
-                    width: 24px;
-                    height: 24px;
-                    background: #101010;
-                    clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
-                    margin-right: 8px; /*Avec le padding de 16, marge de 24px*/  
-                    &:hover{
-                        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                        clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
-                    }
-                }
+                // &__like {
+                //     width: 24px;
+                //     height: 24px;
+                //     background: #101010;
+                //     clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+                //     margin-right: 8px; /*Avec le padding de 16, marge de 24px*/  
+                //     &:hover{
+                //         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                //         clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+                //     }
+                   
+                // }
 
                 .heart{
                     width: 24px;
                     height: 24px;
                     fill: white;
                     border: solid 1px #101010;
-
+                    
                     &:hover{
                         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
                         clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
                     }
-                    
-
                 }
             }
         }
@@ -165,4 +178,3 @@
     }
        
 }
-

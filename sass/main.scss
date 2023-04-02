@@ -2,7 +2,10 @@
 @import "./utils/mediaqueries";
 @import "./base/normalize";
 @import "./base/base";
+@import "./layout/like";
+@import "./layout/button";
 @import "./components/header";
 @import "./components/card";
 @import "./components/footer";
 @import "./pages/home";
+@import "./pages/menu";

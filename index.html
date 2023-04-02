@@ -9,13 +9,7 @@
     <title>ohmyfood</title>
 </head>
 <body>
-    <div id="main-container">
-
-        <!-- Header -->
-        <!-- <header class="header">
-            <div class="header__logo"><img src="./assets/logo/ohmyfood.png" alt="Logo OhMyFood"/></div>
-            <div class="header__form"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Paris, Belleville"></div>
-        </header> -->
+    <div class="main-container">
 
         <header class="header">
             <img src="./assets/logo/ohmyfood.png" alt="Logo OhMyFood"/>
@@ -23,14 +17,13 @@
 
         <div class="home-form"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Paris, Belleville"></div>
 
-
         <!-- Localisation -->
 
         <!-- Section Accueil -->
         <section class="offer-details">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button>Explorez nos restaurants</button>
+            <button class="btn">Explorez nos restaurants</button>
         </section>
 
         <!-- Section Fonctionnement -->
@@ -69,7 +62,7 @@
 
             <div class="restaurants__results">
 
-                <a href="#" class="restaurants__results__card">
+                <a href="./restaurants/Menu_La_Palette_du_Goût.html" class="restaurants__results__card">
                     <p class="tag-nouveau">Nouveau</p>
                     <img src="./assets/restaurants/lapalette.jpg" alt="La Palette du Goût">
                     
@@ -78,7 +71,9 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="restaurants__results__card__details__like"></div>
+                        <!-- <div class="restaurants__results__card__details__like"></div> -->
+                        <div class="like"></div>  
+                        
                         <svg class="heart" viewBox="0 0 32 29.6">
                             <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
                               c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
@@ -98,7 +93,8 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
-                        <div class="restaurants__results__card__details__like"></div>                    
+                        <!-- <div class="restaurants__results__card__details__like"></div> -->
+                        <div class="like"></div>                      
                     </div>
                 </a>
 
@@ -109,7 +105,8 @@
                             <h3>A la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <div class="restaurants__results__card__details__like"></div>                    
+                        <!-- <div class="restaurants__results__card__details__like"></div>  -->
+                        <div class="like"></div>                     
                     </div>
                 </a>
 
@@ -120,7 +117,8 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <div class="restaurants__results__card__details__like"></div>                    
+                        <!-- <div class="restaurants__results__card__details__like"></div> -->
+                        <div class="like"></div>                      
                     </div>
                 </a>
             </div>
@@ -129,10 +127,10 @@
         <footer>
             <!-- <div class="footer__logo"><img src="./assets/logo/ohmyfood.png"/></div> -->
             <p>ohmyfood</p>
-            <a class="footer__link footer__icon"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-            <a class="footer__link footer__icon"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-            <a class="footer__link">Mentions légales</a>
-            <a class="footer__link">Contact</a>
+            <a href="#" class="footer__link footer__icon"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+            <a href="#" class="footer__link footer__icon"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+            <a href="#" class="footer__link">Mentions légales</a>
+            <a href="#" class="footer__link">Contact</a>
         </footer>
     </div>
 </body>
