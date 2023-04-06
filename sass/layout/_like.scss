@@ -7,7 +7,6 @@
     Seule une zone spécifique de l'élément sera affichée. Ici, forme d'un coeur transparent avec seulement bordure visible */
     margin-right: 8px; /*Avec le padding de 16, marge de 24px*/ 
     &:hover{
-        opacity: 0;
         animation: opacity 300ms forwards;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
