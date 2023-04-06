@@ -1,10 +1,26 @@
-.top-img{
-    height: 275px;
-    width: 100%;
-    background-size: cover;
-    background-image: url(../../assets/restaurants/lapalette.jpg);
+// .top-img{
+//     height: 275px;
+//     width: 100%;
+//     background-size: cover;
+//     background-image: url(../../assets/restaurants/lapalette.jpg);
+// }
+
+
+.top-img-menu{
+    img{
+        position: relative;
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
 }
 
+.main-container--menu{
+    @include desktop-only{
+        background-color: white;
+    }
+}
 
 .menu{
     display: flex;
@@ -12,13 +28,24 @@
     border-radius: 40px 40px 0px 0px;
     margin-top: -35px;
     padding: 0px 20px 36px 20px;
+    position: relative;
+    z-index: 1;
     background-color: $background-color;
-    // gap: 40px;
+    @include desktop-only{
+        max-width: 996px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &__heading{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include desktop-only {
+            justify-content: center;
+            align-items: baseline;
+            gap: 24px;
+        }
         h1{
             font-family: $secundary-font;
             font-style: italic;
@@ -27,19 +54,19 @@
         }
     }
 
-    &__categ{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+    &__categ{       
         padding-bottom: 40px;
+        animation: menu__categ-appear 0.3s ease-in-out both;
+        @include desktop-only{
+            padding-left: 120px;
+            padding-right: 120px;
+        }
 
         &__title{
             text-transform : uppercase;
             font-weight: 300;
             font-size: 16px;
             line-height: 19px;
-            
         }
         hr{
             width: 40px;
@@ -51,40 +78,120 @@
 
         &__plat{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             background: #FFFFFF;
             box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
             border-radius: 16px;
-            align-items:flex-end;
-            padding: 12px 5px;
-            width: 100%;
+            overflow: hidden;
+            margin: 12px 0px;
             &__txt{
-                padding: 8px;
                 display: flex; /*Flexbox pour pouvoir ajouter un gap*/
                 flex-direction: column;
+                flex: 1;
+                padding: 16px;
                 gap: 10px; 
+                overflow: hidden;
                 &__name{
                     padding: 0;
                     font-size: 18px;
                     font-weight: 500;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
                 &__details{
                     padding: 0;
                     font-size: 15px;
                     font-weight: 300;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
-                }
+            }
             &__price{
                 padding: 8px;
-                margin-right: 16px;
+                //margin-right: 16px;
+                width: 16%;
                 font-size: 15px;
                 font-weight: 700;
+                text-align: right;
+                align-self: flex-end;
+                padding: 16px;               
             }
 
+            &__add{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16%;
+                margin-right: -16%;
+                background: $color-tertiary;
+                border-radius: 0px 15px 15px 0px;
+                transition: all 400ms;
+                i{
+                    color: white;
+                    font-size: 24px;
+                }
+            }
+            &:hover &__add{
+                margin-right: 0;
+                cursor: pointer;
+                    i{
+                        animation-name: check-rotate;
+                        animation-duration: 0.5s;
+                        animation-delay: 100ms;
+                      
+                        }
             }
     }
-        
 }
 
+@keyframes menu__categ-appear {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  $menu__categ-delay: 0.25s;
+
+  .menu__categ:nth-child(2){
+    animation-delay: $menu__categ-delay;
+  }
+
+  .menu__categ:nth-child(3){
+    animation-delay: $menu__categ-delay * 2;
+  }
+
+  .menu__categ:nth-child(4){
+    animation-delay: $menu__categ-delay * 3;
+  }
+
+//   @for $i from 2 through 4{
+//     menu__categ:nth-child(#{$i}){
+//         animation-delay: $menu__categ-delay * ($i - 1);
+//     }
+//   }
+
+@keyframes add-appear {
+    0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+
+}
+
+
+
+@keyframes check-rotate{
+    to {
+        transform: rotate(1turn);
+    }
+}
+}
 

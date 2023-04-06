@@ -3,10 +3,21 @@ footer{
     color: white;
     line-height: 1.5rem;
     padding-top: 24px;
+    @include desktop-only{
+        // padding-left: 200px;
+        // padding-right: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 24px;
+    }
     p{
         font-family: Shrikhand;
         font-size: 18px;
         padding-bottom: 16px;
+        @include desktop-only{
+            order: 2;
+        }
     }
     .footer__link{
         display: block;
