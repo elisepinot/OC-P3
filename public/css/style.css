@@ -317,6 +317,7 @@ template {
 
 .main-container {
   max-width: 1400px;
+  margin: auto;
   width: 100%;
   background-color: #F5F5F5;
 }
