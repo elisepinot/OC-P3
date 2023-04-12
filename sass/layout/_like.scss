@@ -1,4 +1,36 @@
-.like {
+  //Coeur avec ajout icône Font-Awesome
+
+  .heart__icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    &--empty{
+        position: absolute;
+        color: black;
+    }
+    &--full{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
+    &:hover &--full{
+        opacity: 1;
+
+    }
+    .menu{
+        
+    }
+}
+
+
+// Ajout avec clip-path et path : fonctionne mais code pas valide W3C
+
+.like{
     width: 24px;
     height: 24px;
     background: #101010;
@@ -15,12 +47,44 @@
     }
 }
 
-@keyframes opacity{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+// @keyframes opacity{
+//     0%{
+//         opacity: 0;
+//     }
+//     100%{
+//         opacity: 1;
+//     }
+// }
+
+
+// Test création coeur avec :before et :after : pas possible de faire un coeur blanc 
+
+// .like {
+//     background-color: white;
+//     border: solid black 1px;
+//     display: inline-block;
+//     height: 30px;
+//     margin: 0 10px;
+//     position: relative;
+//     top: 0;
+//     transform: rotate(-45deg);
+//     width: 30px;
+//     &:before, &:after{
+//         content: "";
+//         background-color: red;
+//         border: solid black 1px;
+//         border-radius: 50%;
+//         height: 30px;
+//         position: absolute;
+//         width: 30px;
+//     }
+//     &:before{
+//         top: -15px;
+//         left: 0;
+//     }
+//     &:after{
+//         left: 15px;
+//         top: 0;
+//     }
+//   }
 

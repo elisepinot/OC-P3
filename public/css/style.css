@@ -316,7 +316,6 @@ template {
 }
 
 .main-container {
-  max-width: 1400px;
   margin: auto;
   width: 100%;
   background-color: #F5F5F5;
@@ -354,6 +353,28 @@ a:visited {
   color: #000000;
 }
 
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.heart__icon--empty {
+  position: absolute;
+  color: black;
+}
+.heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
+}
 .like {
   width: 24px;
   height: 24px;
@@ -371,14 +392,6 @@ a:visited {
   cursor: pointer;
 }
 
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .btn {
   height: 50px;
   font-weight: 500;
@@ -763,8 +776,7 @@ footer .footer__link.footer__icon {
 @media screen and (min-width: 992px) {
   .menu__heading {
     justify-content: center;
-    align-items: baseline;
-    gap: 24px;
+    gap: 32px;
   }
 }
 .menu__heading h1 {

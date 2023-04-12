@@ -35,8 +35,8 @@
         align-items: center;
         @include desktop-only {
             justify-content: center;
-            align-items: baseline;
-            gap: 24px;
+            // align-items: baseline; 
+            gap: 32px;
         }
         h1{
             font-family: $secundary-font;
