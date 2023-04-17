@@ -8,7 +8,7 @@
     align-items: center;
     z-index: 10;
     animation: fade;
-    animation-duration: 300ms;
+    animation-duration: 400ms;
     animation-fill-mode: forwards;
     animation-delay: 1s;
     &__inner {
@@ -18,7 +18,7 @@
         border: 20px solid;
         border-color: $background-color;
         border-right-color: $color-primary;
-        animation: spin 300ms infinite linear;
+        animation: spin 800ms infinite linear;
     }
 }
  

@@ -23,6 +23,9 @@
         opacity: 1;
 
     }
+    &:hover &--empty{
+        opacity: 0;
+    }
 }
 
 

@@ -377,6 +377,9 @@ a:visited {
 .heart__icon:hover .heart__icon--full {
   opacity: 1;
 }
+.heart__icon:hover .heart__icon--empty {
+  opacity: 0;
+}
 
 .btn {
   height: 50px;
@@ -425,7 +428,7 @@ a:visited {
   align-items: center;
   z-index: 10;
   animation: fade;
-  animation-duration: 300ms;
+  animation-duration: 400ms;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
@@ -436,7 +439,7 @@ a:visited {
   border: 20px solid;
   border-color: #F5F5F5;
   border-right-color: #9356DC;
-  animation: spin 300ms infinite linear;
+  animation: spin 800ms infinite linear;
 }
 
 @keyframes spin {
@@ -646,7 +649,6 @@ footer .footer__link.footer__icon {
 @media screen and (min-width: 992px) {
   .restaurants {
     padding-bottom: 80px;
-    padding-right: 0;
   }
 }
 .restaurants__results {
@@ -658,13 +660,6 @@ footer .footer__link.footer__icon {
   .restaurants__results {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 992px) {
-  .restaurants__results {
-    flex-wrap: nowrap;
-    overflow: scroll;
-    padding-bottom: 20px;
   }
 }
 .restaurants__results__card {

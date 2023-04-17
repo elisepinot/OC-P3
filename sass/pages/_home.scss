@@ -111,7 +111,7 @@
     flex-direction: column;
     @include desktop-only{
         padding-bottom: 80px;
-        padding-right: 0;
+        // padding-right: 0;
     }
     &__results{
         display: flex;
@@ -121,11 +121,11 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
-        @include desktop-only{
-            flex-wrap: nowrap;
-            overflow: scroll;
-            padding-bottom: 20px;
-        }
+        // @include desktop-only{
+        //     flex-wrap: nowrap;
+        //     overflow: scroll;
+        //     padding-bottom: 20px;
+        // }
         &__card{
             position: relative;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
