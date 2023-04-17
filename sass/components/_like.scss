@@ -14,6 +14,7 @@
         position: absolute;
         opacity: 0;
         background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         transition: all 400ms;
@@ -50,15 +51,19 @@
 //     width: 24px;
 //     height: 24px;
 //     background: #101010;
-//     clip-path: url('../../assets/clip.svg#clip-path-1');
+//     // clip-path: url('../../assets/clip.svg#clip-path-1');
+//     clip-path: url(assets/clip.svg#clip-path-1);
+//     // clip-path: url(#clip-path-1);
 //     /* Empêche une portion d'un élément d'être affichée en définissant une région de rognage.
 //     Seule une zone spécifique de l'élément sera affichée. Ici, forme d'un coeur transparent avec seulement bordure visible */
 //     margin-right: 8px; /*Avec le padding de 16, marge de 24px*/
 //     &:hover{
 //         animation: opacity 300ms forwards;
 //         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-//         clip-path: url('../../assets/clip.svg#clip-path-2');
+//         // clip-path: url('../../assets/clip.svg#clip-path-2');
+//         clip-path: url(assets/clip.svg#clip-path-2);
 //         /* clip-path : forme d'un coeur plein */
+//         // clip-path: url(#clip-path-2);
 //         cursor: pointer;
 //     }
 // } 
@@ -104,4 +109,3 @@
 //         top: 0;
 //     }
 //   }
-

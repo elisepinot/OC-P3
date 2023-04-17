@@ -316,6 +316,7 @@ template {
 }
 
 .main-container {
+  max-width: 1400px;
   margin: auto;
   width: 100%;
   background-color: #F5F5F5;
@@ -368,6 +369,7 @@ a:visited {
   position: absolute;
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: all 400ms;
